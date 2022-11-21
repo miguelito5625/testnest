@@ -1,7 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import fs from 'fs';
-
+import * as fs from 'fs';
 async function bootstrap() {
   const httpsOptions = {
     key: fs.readFileSync('/etc/letsencrypt/live/mikeserver1.tk/privkey.pem'),
